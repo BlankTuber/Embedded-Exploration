@@ -1,6 +1,6 @@
 # Embedded Exploration
 
-Exploring embedded systems programming with Rust and C
+Exploring embedded systems programming with Rust and C, with a focus on C
 
 Points of Interest:
 
@@ -18,5 +18,3 @@ Points of Interest:
 
 - Joystick input
   - Input for simple games
-
--- *Won't be starting this until the projects [Quidque Studio](https://github.com/Quidque-Studio/Quidque-Studio-Website.git) and [MiniBonk](https://github.com/BlankTuber/MiniBonk.git) are finished.* --
