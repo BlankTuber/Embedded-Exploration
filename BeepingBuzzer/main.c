@@ -18,7 +18,7 @@ int main() {
 
     // Take clockspeed 125 MHz, divide by 125 = 1MHz
     pwm_set_clkdiv(slice, 125.0f);
-    // 1MHz / 1000 = 1kH<
+    // 1MHz / 1000 = 1kHz
     set_tone(slice, 1000);
     // Enable PWM
     pwm_set_enabled(slice, true);
