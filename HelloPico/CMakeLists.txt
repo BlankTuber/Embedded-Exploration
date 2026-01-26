@@ -8,6 +8,8 @@ include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 
 project(hello_pico C CXX ASM)
 
+set(PICOTOOL_FETCH_FROM_GIT OFF)
+
 pico_sdk_init()
 
 add_executable(hello_pico main.c)

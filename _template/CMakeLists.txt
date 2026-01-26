@@ -8,6 +8,7 @@ set(PICO_BOARD pico2)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 project(${PROJECT_NAME} C CXX ASM)
+set(PICOTOOL_FETCH_FROM_GIT OFF)
 pico_sdk_init()
 
 # Source files
