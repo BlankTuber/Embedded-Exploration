@@ -16,8 +16,8 @@ int main() {
     gpio_set_function(BUZZER_PIN, GPIO_FUNC_PWM);
     uint slice = pwm_gpio_to_slice_num(BUZZER_PIN);
 
-    // Take clockspeed 125 MHz, divide by 125 = 1MHz
-    pwm_set_clkdiv(slice, 125.0f);
+    // Take clockspeed 150 MHz, divide by 150 = 1MHz
+    pwm_set_clkdiv(slice, 150.0f);
     // 1MHz / 1000 = 1kHz
     set_tone(slice, 1000);
     // Enable PWM
