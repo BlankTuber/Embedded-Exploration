@@ -19,7 +19,7 @@ add_executable(${PROJECT_NAME}
 # Libraries
 target_link_libraries(${PROJECT_NAME}
     pico_stdlib
-    # hardware_pwm      # Buzzer tones
+    hardware_pwm      # Buzzer tones
     # hardware_adc      # Joystick analog
     # hardware_pio      # WS2812B LEDs
     # hardware_i2c
