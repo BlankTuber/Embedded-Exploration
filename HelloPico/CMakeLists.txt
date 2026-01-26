@@ -4,7 +4,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(PICO_BOARD pico2)
 
-
 include(pico_sdk_import.cmake)
 
 project(hello_pico C CXX ASM)
