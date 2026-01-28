@@ -3,12 +3,13 @@
 #include "hardware/pwm.h"
 #include "pico/stdlib.h"
 
-#define BUZZER_PIN 28
+#define BUZZER_PIN 15
 
 // Update tone
 void set_tone(uint slice, uint newwrap) {
     pwm_set_wrap(slice, newwrap);
-    pwm_set_chan_level(slice, PWM_CHAN_A, newwrap / 2);
+    uint channel = pwm_gpio_to_channel(BUZZER_PIN);
+    pwm_set_chan_level(slice, channel, newwrap / 2);
 }
 
 int main() {
