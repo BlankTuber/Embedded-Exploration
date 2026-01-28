@@ -37,7 +37,7 @@ int main() {
         uint bar_y_pos = adc_y_raw * bar_width / adc_max;
 
         // Fancy print
-        printf("\rX: [");
+        printf("X: [");
         for (uint i = 0; i < bar_width; i++) {
             putchar(i == bar_x_pos ? 'o' : ' ');
         }
@@ -47,7 +47,7 @@ int main() {
             putchar(i == bar_y_pos ? 'o' : ' ');
         }
 
-        printf("] SW: %s", is_pressed ? "released" : "pressed");
+        printf("] SW: %s\n", is_pressed ? "released" : "pressed");
         sleep_ms(50);
     }
 }
