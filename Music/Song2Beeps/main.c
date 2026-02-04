@@ -17,33 +17,6 @@ void set_tone(uint slice, uint freq) {
     }
 }
 
-// Play each sample's 3 tones in rapid succession for a smooth arpeggiation
-void play_sample(uint slice, const int sample[]) {
-    bool silent = true;
-    for (int i = 0; i < MAX_TONES; i++) {
-        if (sample[i] != 0)
-            silent = false;
-    }
-
-    if (silent) {
-        set_tone(slice, 0);
-        sleep_ms(SAMPLE_DURATION_MS);
-        return;
-    }
-
-    int elapsed = 0;
-    while (elapsed < SAMPLE_DURATION_MS) {
-        for (int i = 0; i < MAX_TONES && elapsed < SAMPLE_DURATION_MS; i++) {
-            if (sample[i] == 0) {
-                continue; // Skip
-            }
-            set_tone(slice, sample[i]);
-            sleep_ms(TONE_SLICE_MS);
-            elapsed += TONE_SLICE_MS;
-        }
-    }
-}
-
 int main() {
     // Initialize pin
     gpio_set_function(BUZZER_PIN, GPIO_FUNC_PWM);
@@ -58,7 +31,8 @@ int main() {
 
     // Play song
     for (int i = 0; i < count; i++) {
-        play_sample(slice, tones[i]);
+        set_tone(slice, tones[i]);
+        sleep_ms(TONE_SLICE_MS);
     }
 
     // Stop buzzer
