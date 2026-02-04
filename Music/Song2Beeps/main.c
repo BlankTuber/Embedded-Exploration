@@ -32,11 +32,12 @@ int main() {
     // Play song
     for (int i = 0; i < count; i++) {
         set_tone(slice, tones[i]);
-        sleep_ms(TONE_SLICE_MS);
+        sleep_ms(TARGET_TONE_MS);
     }
 
     // Stop buzzer
     set_tone(slice, 0);
+    pwm_set_enabled(slice, false);
 
     return 0;
 }
