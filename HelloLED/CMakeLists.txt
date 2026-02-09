@@ -9,6 +9,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 project(${PROJECT_NAME} C CXX ASM)
 set(PICOTOOL_FETCH_FROM_GIT OFF)
+set(PIOASM_FETCH_FROM_GIT OFF)
+set(Pioasm_DIR "D:/Tools/pico-sdk/tools/pioasm/build")
 pico_sdk_init()
 
 # Source files
