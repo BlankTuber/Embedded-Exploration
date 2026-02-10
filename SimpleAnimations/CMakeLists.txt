@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 # Project config
-set(PROJECT_NAME "my_project")
+set(PROJECT_NAME "simple_animations")
 set(PICO_BOARD pico2)
 
 # SDK setup (Do Not Touch)
@@ -27,7 +27,7 @@ target_link_libraries(${PROJECT_NAME}
     pico_stdlib
     # hardware_pwm      # Buzzer tones
     # hardware_adc      # Joystick analog
-    # hardware_pio      # WS2812B LEDs
+    hardware_pio      # WS2812B LEDs
     # hardware_i2c
     # hardware_spi
 )
