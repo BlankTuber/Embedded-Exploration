@@ -32,11 +32,12 @@ int main() {
     ws2812_program_init(pio, sm, offset, WS2812_PIN, 800000, IS_RGBW);
 
     uint32_t grid[NUM_PIXELS] = {0};
+    const int snake_len = NUM_PIXELS * 0.05;
     while (true) {
         for (int i = 0; i < NUM_PIXELS; i++) {
-            grid[i] = urgb_u32(0xff, 0, 0);
-            if (i > 10) {
-                grid[i - 10] = 0;
+            grid[i] = urgb_u32(0, 0x10, 0);
+            if (i >= snake_len) {
+                grid[i - snake_len] = 0;
             }
 
             for (int pixel = 0; pixel < NUM_PIXELS; ++pixel) {
