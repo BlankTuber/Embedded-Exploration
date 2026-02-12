@@ -16,6 +16,9 @@ pico_sdk_init()
 # Source files
 add_executable(${PROJECT_NAME}
     main.c
+    snake.c
+    spiral.c
+    raindrops.c
 )
 
 pico_generate_pio_header(${PROJECT_NAME}
