@@ -22,6 +22,6 @@ void ripple(PIO pio, uint sm, uint32_t *grid) {
 
         put_pixels(pio, sm, grid);
 
-        sleep_ms(50);
+        sleep_ms(100);
     }
 }

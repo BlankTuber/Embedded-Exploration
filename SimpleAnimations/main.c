@@ -10,7 +10,7 @@ int main() {
     uint sm;
     uint offset;
 
-    animation_func animations[] = {snake, spiral, raindrops, ripple};
+    animation_func animations[] = {snake, spiral, raindrops, ripple, random_fill};
 
     bool success = pio_claim_free_sm_and_add_program_for_gpio_range(
         &ws2812_program, &pio, &sm, &offset, PIN, 1, true);
