@@ -19,6 +19,7 @@ add_executable(${PROJECT_NAME}
     snake.c
     spiral.c
     raindrops.c
+    ripple.c
 )
 
 pico_generate_pio_header(${PROJECT_NAME}
