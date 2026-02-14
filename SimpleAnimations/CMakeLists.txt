@@ -21,6 +21,7 @@ add_executable(${PROJECT_NAME}
     raindrops.c
     ripple.c
     random_fill.c
+    rainbow_ripple.c
 )
 
 pico_generate_pio_header(${PROJECT_NAME}

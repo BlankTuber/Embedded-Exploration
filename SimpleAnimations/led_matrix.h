@@ -32,10 +32,6 @@ static inline void put_pixels(PIO pio, uint sm, uint32_t *grid) {
     }
 }
 
-static inline uint8_t lerp(uint8_t start, uint8_t end, int step, int steps) {
-    return start + (end - start) * step / steps;
-}
-
 static inline uint32_t hsv_to_rgb(int hue, uint8_t brightness) {
     int region = hue / 60;
     int remainder = (hue % 60) * brightness / 60;
