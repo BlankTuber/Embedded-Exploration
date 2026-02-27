@@ -16,6 +16,9 @@ pico_sdk_init()
 # Source files
 add_executable(${PROJECT_NAME}
     main.c
+    display.c
+    joystick.c
+    game.c
 )
 
 pico_generate_pio_header(${PROJECT_NAME}
