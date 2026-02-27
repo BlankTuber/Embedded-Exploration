@@ -23,10 +23,16 @@ typedef struct {
     int paddle_size;
 } GameState;
 
-typedef enum { STATE_MENU, STATE_PLAYING, STATE_GAME_OVER } State;
+typedef enum {
+    STATE_MENU,
+    STATE_PLAYING,
+    STATE_GAME_OVER_PLAYER,
+    STATE_GAME_OVER_AI
+} State;
+typedef enum { WINNER_PLAYER, WINNER_AI } Winner;
 
 State menu_state(LED_Info info);
 State game_state(LED_Info info);
-State game_over_state(LED_Info info);
+State game_over_state(LED_Info info, Winner winner);
 
 #endif

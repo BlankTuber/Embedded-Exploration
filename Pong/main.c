@@ -16,8 +16,12 @@ int main() {
             state = game_state(info);
             break;
 
-        case STATE_GAME_OVER:
-            state = game_over_state(info);
+        case STATE_GAME_OVER_PLAYER:
+            state = game_over_state(info, WINNER_PLAYER);
+            break;
+
+        case STATE_GAME_OVER_AI:
+            state = game_over_state(info, WINNER_AI);
             break;
         }
     }
